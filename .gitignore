@@ -1,0 +1,8 @@
+__pycache__/
+.venv/
+venv/
+output/
+data/*.csv
+CLAUDE.md
+AGENTS.md
+.DS_Store
