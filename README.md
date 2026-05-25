@@ -3,7 +3,7 @@
 ![Python](https://img.shields.io/badge/python-3.11-blue)
 ![scikit-learn](https://img.shields.io/badge/scikit--learn-1.5-orange)
 
-still learning ML so i tried building a model that predicts data science salaries. tried 4 different regression models to see which one works best.
+predicts data science salaries based on experience, role, education, company size, and skill levels. compared 4 regression models to pick the best one.
 
 dataset: [Salary Prediction Data — Kaggle](https://www.kaggle.com/datasets/mrsimple07/salary-prediction-data)
 
@@ -18,17 +18,17 @@ dataset: [Salary Prediction Data — Kaggle](https://www.kaggle.com/datasets/mrs
 | **Random Forest** | **~$6,100** | **0.88** | **0.87** |
 | Gradient Boosting | ~$6,800 | 0.86 | 0.85 |
 
-random forest won. about $6k off on salaries that range from $40k to $180k. not bad.
+random forest wins — about $6k off on salaries that range from $40k to $180k.
 
 ---
 
-## what i noticed
+## what drives salary
 
-- experience is by far the biggest factor (no surprise)
+- experience is by far the biggest factor
 - ML skill matters more than python or SQL
 - PhD adds ~$18k over bachelor on average
-- big company pays ~$20k more than startup for same experience
-- linear models work but tree-based ones catch the non-linear stuff better
+- big company pays ~$20k more than startup for the same experience
+- tree-based models catch the non-linear interactions linear models miss
 
 ---
 
@@ -43,6 +43,12 @@ python data/generate.py
 python analysis.py
 # plots show up in output/
 ```
+
+---
+
+## what's next
+
+planning to add XGBoost with optuna for hyperparameter tuning, and use SHAP for proper feature importance instead of the default random forest one.
 
 ---
 
